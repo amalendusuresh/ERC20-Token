@@ -1,0 +1,22 @@
+mkdir ignition-demo
+cd ignition-demo
+
+npm init -y
+npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox hardhat-ignition @openzeppelin/contracts
+npx hardhat
+# Choose: "Create an empty hardhat.config.js"
+
+
+
+npx hardhat ignition deploy ignition/modules/DeployAll.js
+
+#!/bin/bash
+echo "🛠 Installing dependencies..."
+npm install
+
+echo "📝 Compiling contracts..."
+npx hardhat compile
+
+echo "🚀 Deploying all contracts via Hardhat Ignition..."
+npx hardhat ignition deploy ignition/modules/DeployAll.js
+
